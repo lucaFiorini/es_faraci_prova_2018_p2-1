@@ -21,8 +21,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
       $_SESSION['UserID'] = $row['UserID'];
       $_SESSION['level'] = $row['level'];
 
-      //TODO: header('redirect');
-
+      header('Location: list.php');
+      die();
+      
     } else $msg="Invalid email or password";
 
   } else {
