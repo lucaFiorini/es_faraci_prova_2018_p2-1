@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+  if(!isset($_SESSION['UserID'],$_SESSION['level']) || $_SESSION['level'] != 'ADMIN'){
+    echo "Forbidden, please log in before viewing this page";
+    die(403);
+  }
 
   require_once "functions.php";
 
